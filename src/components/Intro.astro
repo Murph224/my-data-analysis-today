@@ -1,0 +1,24 @@
+---
+import { publicAsset } from "../utils/publicAsset";
+---
+
+<section class="intro" id="top" aria-labelledby="intro-title">
+	<img
+		class="intro-image"
+		src={publicAsset("images/cowboy-hat-cat.jpg")}
+		alt="A black-and-white cat wearing a purple crocheted cowboy hat with a dotted band."
+		fetchpriority="high"
+	/>
+	<div class="intro-shade" aria-hidden="true"></div>
+	<div class="intro-inner">
+		<div class="intro-copy">
+			<p class="eyebrow">A curious little hat shop</p>
+			<h1 id="intro-title">Really nice hats for cats, <em>for all occasions.</em></h1>
+			<p class="intro-description">
+				From soft knits to party caps and statement brims, a collection for cats and the people they live with.
+			</p>
+			<a class="intro-link" href="#collection">Explore the collection <span aria-hidden="true">↓</span></a>
+		</div>
+	</div>
+	<p class="intro-caption">A little brim, a lot of character.</p>
+</section>

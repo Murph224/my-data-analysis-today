@@ -1,0 +1,34 @@
+---
+import Intro from "../components/Intro.astro";
+import OccasionGallery from "../components/OccasionGallery.astro";
+import CatStories from "../components/CatStories.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { publicAsset } from "../utils/publicAsset";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={publicAsset("favicon.svg")} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="A little gallery celebrating cats and their hats for all kinds of occasions." />
+		<meta name="theme-color" content="#ded7d3" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+		<title>Hats for Cats | For all occasions</title>
+	</head>
+	<body>
+		<SiteHeader />
+		<main>
+			<Intro />
+			<OccasionGallery />
+			<CatStories />
+			<SiteFooter />
+		</main>
+	</body>
+</html>

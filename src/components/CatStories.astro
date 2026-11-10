@@ -1,0 +1,111 @@
+---
+import { publicAsset } from "../utils/publicAsset";
+
+const gothCats = [
+	{
+		image: "images/witch-hat-cat.jpg",
+		alt: "Miyako, a grey and white cat wearing a small purple witch hat with black lace.",
+		caption: "Miyako takes the after-dark look for a spin.",
+	},
+	{
+		image: "images/halloween-cats.jpg",
+		alt: "A black cat in a wizard costume poses beside other costumed pets on a lawn.",
+		caption: "A Halloween portrait with a little dramatic flair.",
+	},
+];
+
+const workingCats = [
+	{
+		image: "images/cat-at-computer.jpg",
+		alt: "An orange cat seated at a desktop computer and keyboard.",
+		caption: "The late shift: mostly supervising the cursor.",
+	},
+	{
+		image: "images/cat-and-laptop.jpg",
+		alt: "A small tabby kitten exploring a laptop keyboard and cable.",
+		caption: "Junior keyboard tester, currently on a paws-on break.",
+	},
+];
+---
+
+<div class="editorial-stories" id="worlds">
+	<nav class="story-index" aria-label="Browse cat collections">
+		<a href="#goth-cats">01 / Goth cats</a>
+		<a href="#cowboy-cats">02 / Cowboy cats</a>
+		<a href="#working-cats">03 / Cats at work</a>
+	</nav>
+
+	<section class="theme-block" id="goth-cats" aria-labelledby="goth-title">
+		<div class="theme-heading">
+			<div>
+				<p class="eyebrow">01 / After dark</p>
+				<h2 id="goth-title">Goth cats</h2>
+			</div>
+			<p>Velvet moods, tiny witch hats, and a hint of moonlit mischief. The dramatic entrance is entirely optional.</p>
+		</div>
+		<div class="theme-gallery theme-gallery--goth">
+			{gothCats.map((cat) => (
+				<figure class="theme-photo">
+					<img src={publicAsset(cat.image)} alt={cat.alt} loading="lazy" decoding="async" />
+					<figcaption>{cat.caption}</figcaption>
+				</figure>
+			))}
+		</div>
+	</section>
+
+	<section class="theme-block" id="cowboy-cats" aria-labelledby="cowboy-title">
+		<div class="cowboy-feature">
+			<div class="theme-heading">
+				<p class="eyebrow">02 / Dusty trails</p>
+				<h2 id="cowboy-title">Cats in cowboy hats</h2>
+				<p>A little crochet brim, a lot of frontier spirit. Best paired with a sunbeam and a very short photo session.</p>
+			</div>
+			<figure class="theme-photo cowboy-photo">
+				<img
+					src={publicAsset("images/cowboy-hat-cat.jpg")}
+					alt="A black-and-white cat wearing a purple crocheted cowboy hat with a dotted band."
+					loading="lazy"
+					decoding="async"
+				/>
+				<figcaption>A small hat, a considerable presence.</figcaption>
+			</figure>
+		</div>
+	</section>
+
+	<section class="theme-block" id="working-cats" aria-labelledby="work-title">
+		<div class="theme-heading">
+			<div>
+				<p class="eyebrow">03 / On the clock-ish</p>
+				<h2 id="work-title">Cats at work</h2>
+			</div>
+			<p>Inbox monitor, keyboard tester, chief nap officer. Some roles are best done without a hat at all.</p>
+		</div>
+		<div class="theme-gallery theme-gallery--work">
+			{workingCats.map((cat) => (
+				<figure class="theme-photo">
+					<img src={publicAsset(cat.image)} alt={cat.alt} loading="lazy" decoding="async" />
+					<figcaption>{cat.caption}</figcaption>
+				</figure>
+			))}
+		</div>
+	</section>
+</div>
+
+<section class="story-section" id="story" aria-labelledby="story-title">
+	<div class="story-copy">
+		<p class="eyebrow">Our story / the fanciful version</p>
+		<h2 id="story-title">A tiny hat. A very large personality.</h2>
+		<p>Our made-up beginning takes place on a rain-dark evening at a little shop on Blackthorn Lane. A cat called Moth wandered in, sat beneath the hat stand, and looked like the mysterious proprietor. By morning, the neighborhood had started leaving tiny hats at the door.</p>
+		<p>We like to imagine cats suit hats because they already bring their own ceremony: the slow blink, the dignified pause, the sudden entrance. A hat can be a playful detail in a portrait for a birthday, a quiet afternoon, or absolutely no occasion at all.</p>
+		<p>Cats do not need costumes to belong in a celebration. The hat is only part of the fun when the cat is relaxed and willing; otherwise, the best picture is simply them being themselves.</p>
+	</div>
+</section>
+
+<section class="share-section" id="share" aria-labelledby="share-title">
+	<div class="share-copy">
+		<p class="eyebrow">A small invitation</p>
+		<h2 id="share-title">Show us your cat's occasion hat.</h2>
+		<p>Share a portrait with <strong>#HatsForCats</strong> and let the cat take the credit. Keep it kind, keep it comfortable, and let them leave the look whenever they like.</p>
+		<span class="share-hashtag">#HatsForCats</span>
+	</div>
+</section>

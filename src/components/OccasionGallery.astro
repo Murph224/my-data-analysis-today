@@ -1,0 +1,31 @@
+---
+import { products } from "../data/occasions";
+import { publicAsset } from "../utils/publicAsset";
+---
+
+<section class="collection section-wrap" id="collection" aria-labelledby="collection-title">
+	<div class="section-heading">
+		<p class="eyebrow">The collection</p>
+		<h2 id="collection-title">Different hats for different little dramas.</h2>
+		<p class="section-intro">Soft knits, a paper party cap, and a playful brim. Every style is an invitation, never an obligation.</p>
+	</div>
+	<div class="product-grid">
+		{products.map((product, index) => (
+			<article class="product-item">
+				<figure class="product-figure">
+					<img
+						src={publicAsset(product.image)}
+						alt={product.alt}
+						loading={index === 0 ? "eager" : "lazy"}
+						decoding="async"
+					/>
+				</figure>
+				<div class="product-copy">
+					<p class="product-label">{product.label}</p>
+					<h3>{product.title}</h3>
+					<p>{product.description}</p>
+				</div>
+			</article>
+		))}
+	</div>
+</section>
